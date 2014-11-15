@@ -1,14 +1,14 @@
 haxe-hammer
 ===========
 
-![haxe howler logo](https://raw.githubusercontent.com/adireddy/haxe-howler/master/logo.png)
+![haxe hammer logo](https://raw.githubusercontent.com/adireddy/haxe-hammer/master/logo.png)
 
 Externs of hammer.js for Haxe - Javascript touch gestures library.
 
 ### Installation ###
 
 ```haxe
-haxelib install hammerjs
+coming soon
 ```
 
 ### Usage ###
