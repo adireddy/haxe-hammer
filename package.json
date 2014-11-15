@@ -1,0 +1,31 @@
+{
+    "name": "hammerjs",
+    "version": "0.0.1",
+    "description": "Externs of hammer.js - Javascript touch gestures library",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/adireddy/haxe-hammer"
+    },
+    "keywords": [
+        "js",
+        "haxe",
+        "hammer",
+        "extern",
+        "web",
+        "gestures",
+        "touch"
+    ],
+    "author": {
+    "name": "Adi Reddy Mora",
+    "email": "adiinteractive@gmail.com"
+    },
+    "dependencies": {
+    "grunt": "latest",
+    "grunt-cli": "latest"
+    },
+    "license": "MIT",
+    "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-zip": "^0.16.0"
+    }
+}

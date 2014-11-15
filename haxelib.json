@@ -1,0 +1,13 @@
+{
+"name": "hammerjs",
+"license": "MIT",
+"tags": ["js","haxe","hammer","haxe","web","gestures","touch"],
+"description": "Externs of hammer.js - Javascript touch gestures library",
+"contributors": ["adireddy"],
+"releasenote": "initial release",
+"version": "0.0.1",
+"url": "https://github.com/adireddy/haxe-hammer",
+"dependencies": {
+
+}
+}
