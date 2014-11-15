@@ -3,14 +3,6 @@ package hammer;
 @:native("Recognizer")
 extern class Recognizer {
 
-    static var STATE_POSSIBLE:Int;
-    static var STATE_BEGAN:Int;
-    static var STATE_CHANGED:Int;
-    static var STATE_ENDED:Int;
-    static var STATE_RECOGNIZED:Int;
-    static var STATE_CANCELLED:Int;
-    static var STATE_FAILED:Int;
-
     /**
      * @virtual
      * @type {Object}
