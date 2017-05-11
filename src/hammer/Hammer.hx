@@ -1,27 +1,22 @@
 package hammer;
 
-import js.html.Point;
-import hammer.recognizers.Press;
-import hammer.recognizers.Tap;
-import hammer.recognizers.Pan;
-import hammer.recognizers.Swipe;
-import hammer.recognizers.Pinch;
-import hammer.recognizers.Rotate;
+import hammer.inputjs.Input;
 import js.html.CanvasElement;
 import js.html.HtmlElement;
 
 @:native("Hammer")
 extern class Hammer extends Manager {
 
-    /**
-     * Simple way to create an manager with a default set of recognizers.
-     * @param {HTMLElement} element
-     * @param {Object} [options]
-     * @constructor
-     */
-    @:overload(function(element:HtmlElement, ?options:Options):Void{})
-    @:overload(function(element:Dynamic, ?options:Options):Void{})
-    function new(element:CanvasElement, ?options:Options);
+	/**
+	 * @private
+	 * Simple way to create a manager with a default set of recognizers.
+	 * @param {HTMLElement} element
+	 * @param {Object} [options]
+	 * @constructor
+	 */
+    @:overload(function(element:HtmlElement, ?options:HammerOptions):Void{})
+    @:overload(function(element:Dynamic, ?options:HammerOptions):Void{})
+    function new(element:CanvasElement, ?options:HammerOptions);
 
     static var DIRECTION_NONE:Int;
     static var DIRECTION_LEFT:Int;
@@ -47,9 +42,13 @@ extern class Hammer extends Manager {
 
     static var VERSION:String;
 
-    static var defaults:Options;
+    static var defaults:HammerOptions;
+
+	static var manager:Manager;
+	static var input:Input;
 }
 
+/*
 typedef GestureInteractionData = {
 	var type:String;					//Name of the event. Like panstart.
 	var deltaX:Float;					//Movement of the X axis.
@@ -74,4 +73,4 @@ typedef GestureInteractionData = {
 	var pointers:Dynamic;				//Array with all pointers, including the ended pointers (touchend, mouseup).
 	var changedPointers:Dynamic;		//Array with all new/moved/lost pointers.
 	var preventDefault:Void -> Void;	//Reference to the srcEvent.preventDefault() method. Only for experts!
-}
+}*/

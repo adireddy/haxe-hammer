@@ -1,20 +1,38 @@
 haxe-hammer
 ===========
 
-![haxe hammer logo](https://raw.githubusercontent.com/adireddy/haxe-hammer/master/logo.png)
-
-Externs of hammer.js for Haxe - Javascript touch gestures library.
+Externs of HAMMER.JS for Haxe - Javascript touch gestures library.
 
 ### Installation ###
 
 ```haxe
-coming soon
+haxelib install hammerjs
 ```
 
 ### Usage ###
 
 ```haxe
-coming soon
+import hammer.Hammer;
+import js.Browser;
+
+class Main {
+
+	public function new() {
+		var el = Browser.document.getElementById("myElement");
+		el.style.width = Browser.window.innerWidth + "px";
+		el.style.height = Browser.window.innerHeight + "px";
+
+		var mc = new Hammer(el);
+
+		mc.on("panleft panright tap press", function(ev:Dynamic) {
+			el.textContent = ev.type +" gesture detected.";
+		});
+	}
+
+	static function main() {
+		new Main();
+	}
+}
 ```
 
 This content is released under the [MIT](http://opensource.org/licenses/MIT) License.

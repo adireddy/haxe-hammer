@@ -2,16 +2,24 @@ package hammer;
 
 import js.html.HtmlElement;
 
-@:native("Manager")
+@:native("Hammer.Manager")
 extern class Manager {
 
     /**
      * Manager
      * @param {HTMLElement} element
-     * @param {Object} [options]
+     * @param {Object} [HammerOptions]
      * @constructor
      */
-    function new(element:HtmlElement, ?options:Dynamic);
+    function new(element:HtmlElement, ?options:HammerOptions);
+
+	var handlers:Dynamic;
+	var session:Dynamic;
+	var recognizers:Dynamic;
+	var oldCssProps:Dynamic;
+	var element:HtmlElement;
+	var input:Dynamic;
+	var touchAction:Dynamic;
 
     /**
      * set options
@@ -64,7 +72,7 @@ extern class Manager {
      * @param {Function} handler
      * @returns {EventEmitter} this
      */
-    function on(event:String, handler:Dynamic):Dynamic;
+    function on(event:String, handler:Dynamic):Manager;
 
     /**
      * unbind event, leave emit blank to remove all handlers
@@ -72,7 +80,7 @@ extern class Manager {
      * @param {Function} [handler]
      * @returns {EventEmitter} this
      */
-    function off(event:String, handler:Dynamic):Dynamic;
+    function off(event:String, handler:Dynamic):Manager;
 
     /**
      * emit event to the listeners

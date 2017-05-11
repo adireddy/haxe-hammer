@@ -1,0 +1,13 @@
+-cmd haxelib newrepo
+
+--next
+
+-cp sample
+-cp src
+-main Main
+-js js/hammer-demo.js
+
+-debug
+-D source-map-content
+
+-dce full
