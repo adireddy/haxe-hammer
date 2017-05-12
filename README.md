@@ -17,24 +17,33 @@ haxelib install hammerjs
 
 ```haxe
 import hammer.Hammer;
+import hammer.Manager;
+import hammer.recognizers.Rotate;
+import hammer.GestureInteractionData;
 import js.Browser;
+import js.html.HtmlElement;
 
 class Main {
 
 	public function new() {
-		var el = Browser.document.getElementById("myElement");
-		el.style.width = Browser.window.innerWidth + "px";
-		el.style.height = Browser.window.innerHeight + "px";
+		// get a reference to an element
+		var stage:HtmlElement = cast Browser.document.getElementById("stage");
 
-		var mc = new Hammer(el);
+		// create a manager for that element
+		var mc:Manager = new Manager(stage);
 
-		mc.on("panleft panright tap press", function(ev:Dynamic) {
-			el.textContent = ev.type +" gesture detected.";
+		// create a recognizer
+		var rotate = new Rotate();
+
+		// add the recognizer
+		mc.add(rotate);
+
+		// subscribe to events
+		mc.on("rotate", function(e:GestureInteractionData) {
+		    // do something cool
+		    var rotation = Math.round(e.rotation);
+		    stage.style.transform = "rotate(" + rotation + "deg)";
 		});
-	}
-
-	static function main() {
-		new Main();
 	}
 }
 ```
