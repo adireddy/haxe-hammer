@@ -1,6 +1,6 @@
 package hammer.recognizers;
 
 @:native("Hammer.Swipe")
-extern class Swipe extends Recognizer {
-    function new();
+extern class Swipe extends AttrRecognizer {
+
 }

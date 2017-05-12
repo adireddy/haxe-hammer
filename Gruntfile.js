@@ -14,6 +14,12 @@ module.exports = function (grunt) {
 
         zip: {
             "hammer.zip": ["src/**", "libs/**", "haxelib.json", "README.md"]
+        },
+
+        exec: {
+            copy_libs: "cp -R ./libs ../adireddy.github.io/demos/haxe-hammer/",
+            copy_js: "cp -R ./js ../adireddy.github.io/demos/haxe-hammer/",
+            copy_html: "cp index.html ../adireddy.github.io/demos/haxe-hammer/"
         }
     });
 
@@ -21,5 +27,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-zip");
     grunt.loadNpmTasks("grunt-exec");
     grunt.loadNpmTasks("grunt-contrib-copy");
-    grunt.registerTask("default", ["haxe", "copy"]);
+    grunt.registerTask("default", ["haxe", "exec"]);
 };

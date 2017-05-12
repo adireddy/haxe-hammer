@@ -1,6 +1,6 @@
 {
     "name": "hammerjs",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Externs of hammer.js - Javascript touch gestures library",
     "repository": {
 	"type": "git",

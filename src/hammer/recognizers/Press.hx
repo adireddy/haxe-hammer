@@ -1,6 +1,6 @@
 package hammer.recognizers;
 
 @:native("Hammer.Press")
-extern class Press extends Recognizer {
-    function new();
+extern class Press extends AttrRecognizer {
+
 }
