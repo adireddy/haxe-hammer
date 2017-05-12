@@ -11,7 +11,7 @@ haxelib install hammerjs
 
 ### Demo ###
 
-[http://adireddy.github.io/demos/haxe-hammer/]http://adireddy.github.io/demos/haxe-hammer/
+[http://adireddy.github.io/demos/haxe-hammer](http://adireddy.github.io/demos/haxe-hammer/)
 
 ### Usage ###
 
