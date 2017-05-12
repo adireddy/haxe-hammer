@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/adireddy/haxe-hammer.svg?branch=master)](https://travis-ci.org/adireddy/haxe-hammer)
+
 haxe-hammer
 ===========
 
