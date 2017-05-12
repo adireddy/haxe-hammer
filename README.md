@@ -9,6 +9,10 @@ Externs of HAMMER.JS for Haxe - Javascript touch gestures library.
 haxelib install hammerjs
 ```
 
+### Demo ###
+
+[http://adireddy.github.io/demos/haxe-hammer/]http://adireddy.github.io/demos/haxe-hammer/
+
 ### Usage ###
 
 ```haxe
